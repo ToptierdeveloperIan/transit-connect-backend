@@ -1,12 +1,7 @@
-import smtplib
-
 from .whatsappOTP import  normalize_phone_number
 from random import randint
 import redis, json
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
-import os
-from .emailOTP import API_KEY
+from .emailOTP import send_email
 from.smsOTP import send_sms_otp
 
 r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True)
@@ -60,14 +55,11 @@ class OTP:
 
     @staticmethod
     def send_email_otp(email, otp):
-        message = Mail(
-            from_email='Nexasupport@NexaKenya.co.ke',
-            to_emails=email,
+        response = send_email(
+            to_email=email,
             subject='Your Nexa OTP Code',
-            html_content=f'<p>Your OTP code is: <strong>{otp}</strong></p>'
+            html_content=f'<p>Your OTP code is: <strong>{otp}</strong></p>',
         )
-        sg = SendGridAPIClient(API_KEY)
-        response = sg.send(message)
         print(f"Sent OTP {otp} to {email} via Email. Status: {response.status_code}")
 
     @staticmethod

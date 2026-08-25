@@ -1,21 +1,21 @@
-import os
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail
 from decouple import config
-API_KEY=config('EMAIL_API_KEY')
 
-message = Mail(
-    from_email='nexasupport@nexakenya.co.ke',
-    to_emails='otienoian229@gmail.com',
-    subject='Sending with Twilio SendGrid is Fun',
-    html_content='<strong>and easy to do anywhere, even with us</strong>')
-try:
-    sg = SendGridAPIClient(API_KEY)
-    # sg.set_sendgrid_data_residency("eu")
-    # uncomment the above line if you are sending mail using a regional EU subuser
-    response = sg.send(message)
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
-except Exception as e:
-    print(e)
+
+FROM_EMAIL = config("SENDGRID_FROM_EMAIL", default="Nexasupport@NexaKenya.co.ke")
+
+
+def get_sendgrid_client():
+    return SendGridAPIClient(config("SENDGRID_API_KEY"))
+
+
+def send_email(to_email, subject, html_content, from_email=FROM_EMAIL):
+    message = Mail(
+        from_email=from_email,
+        to_emails=to_email,
+        subject=subject,
+        html_content=html_content,
+    )
+    response = get_sendgrid_client().send(message)
+    return response
