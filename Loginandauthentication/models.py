@@ -15,6 +15,8 @@ class CustomUserManager(BaseUserManager):
             first_name=first_name,
             second_name=second_name,
             phone_number=phone_number,
+
+
             **extra_fields
         )
         user.set_password(extra_fields.get("password"))  # optional if you plan to use password
@@ -40,6 +42,8 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     is_verified = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    is_driver = models.BooleanField(default=False)
+    is_online = models.BooleanField(default=False)
 
     objects = CustomUserManager()
 
@@ -49,22 +53,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.phone_number
 
-class CustomDriver(models.Model):
-    email = models.EmailField(unique=True)
-    phone_number = models.CharField(max_length=15, unique=True)
-    first_name = models.CharField(max_length=50)
-    second_name = models.CharField(max_length=50)
-    profile_photo_url = models.URLField(blank=True, null=True)
-    payment_methods = models.JSONField(default=dict, blank=True)
-    rating = models.DecimalField(decimal_places=2, max_digits=3, default=0)
-    current_location = models.CharField(blank=True, null=True, max_length=255)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-
-    def __str__(self):
-        return self.phone_number
 
 class ToBeNotified_Email(models.Model):
     email = models.EmailField(unique=True)

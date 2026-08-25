@@ -1,0 +1,4 @@
+
+
+class BusException(Exception):
+    pass

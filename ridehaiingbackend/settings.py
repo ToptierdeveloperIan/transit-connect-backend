@@ -27,11 +27,10 @@ from decouple import config
 SECRET_KEY = config('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [
-    "nexakenya.co.ke", "www.nexakenya.co.ke"
-]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost","172.17.83.139","10.0.2.2","192.168.100.8","172.20.10.4","192.168.0.149"]
+
 
 
 
@@ -49,26 +48,42 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     'ride_matching',
-    'corsheaders',
+    'datasync',
+    'RedeemAndRefferalSys',
+    #'corsheaders',
+    'riders',
+    'drivers',
+    'rest_framework_simplejwt.token_blacklist',
+    'paymentSystem',
+    'Support',
+    'UserSettings',
+    'Wallet',
 ]
+
+REST_FRAMEWORK = {
+     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'datasync.middleware.ETagMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-CORS_ALLOWED_ORIGINS = [
-    "https://nexakenya.co.ke",
-    "https://www.nexakenya.co.ke",
-]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 SECURE_HSTS_SECONDS = 31536000
@@ -76,7 +91,7 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
-X_FRAME_OPTIONS = "DENY"
+
 
 ROOT_URLCONF = 'ridehaiingbackend.urls'
 

@@ -1,0 +1,72 @@
+IMANI COMMUNITY — MASHARTI YA HUDUMA
+Toleo 1.0.0
+Tarehe ya kuanza kutumika: 19 Julai 2026
+
+MUHIMU: Tafadhali soma Masharti haya ya Huduma ("Masharti") kwa makini kabla ya kutumia programu ya simu ya Imani Community na huduma zinazohusiana ("Huduma"). Kwa kuunda akaunti, kufikia, au kutumia Huduma, unakubali kufungwa na Masharti haya. Ikiwa hukubaliani, usitumie Huduma.
+
+1. SISI NI NANI
+1.1 Huduma inaendeshwa ili kuwezesha usafiri wa jamii kwa misingi ya njia, uhifadhi, malipo, na vipengele vinavyohusiana kwa abiria na madereva ("Watumizi").
+1.2 Anwani za mawasiliano za kisheria na msaada zitachapishwa katika sehemu ya Usaidizi ndani ya programu na zinaweza kubadilishwa mara kwa mara.
+
+2. USTAHIKI
+2.1 Lazima utoe taarifa sahihi za usajili, ikiwa ni pamoja na nambari halali ya simu inayoweza kupokea nambari za siri za mara moja (OTP).
+2.2 Unathibitisha kuwa una uwezo wa kisheria wa kukubali Masharti haya katika eneo lako la mamlaka.
+2.3 Madereva lazima wawe na leseni, vibali, na viwango vya gari vinavyohitajika na sheria na mahitaji yetu ya uandikishaji.
+
+3. AKAUNTI NA USALAMA
+3.1 Ufikiaji unategemea nambari ya simu. Unawajibika kulinda vifaa vinavyotumika kupokea OTP na kwa shughuli zote chini ya akaunti yako.
+3.2 Tutangaze mara moja ukihisi kuna ufikiaji usioidhinishwa. Tunaweza kusimamisha akaunti ili kulinda Watumizi au Huduma.
+3.3 Usishiriki akaunti, kuunda akaunti kwa wengine bila mamlaka, au kujifanya mtu mwingine.
+
+4. HUDUMA
+4.1 Abiria wanaweza kuona njia, kupata makadirio ya nauli, kutumia ofa zinazostahiki pale zinapopatikana, kuomba uhifadhi, na kulipa kwa njia zinazotumika (pamoja na pesa za simu pale zimewezeshwa).
+4.2 Madereva wanaweza kuweka upatikanaji, kupokea maelekezo ya safari, na kukamilisha safari chini ya sheria za jukwaa.
+4.3 Hatuhakikishii upatikanaji usiokatizwa, muda wa kuoanisha, au kuwa basi au dereva atapatikana kila wakati kwenye njia uliyochagua.
+4.4 Vipengele kama akiba nje ya mtandao, ofa, na ufuatiliaji wa moja kwa moja vinaweza kuwa sehemu au kubadilika.
+
+5. UHIFadhi, NAULI, NA MALIPO
+5.1 Nauli zinazoonyeshwa, pamoja na nauli yenye punguzo, ni makadirio au nukuu hadi malipo yathibitishwe kwa mafanikio kulingana na mtoa malipo wetu na rekodi za seva.
+5.2 Misimbo ya ofa iko chini ya sheria za ustahiki, idadi ya majaribio, muda wa kuisha, na uthibitishaji wa seva. Kukomboa msimbo si sawa na kutumia jaribio; majaribio mara nyingi hutumiwa baada ya malipo yafaulu kulingana na sera zetu za ofa.
+5.3 Unaturuhusu sisi na washirika wetu wa malipo kuchakata malipo unayoanzisha. Malipo yaliyoshindikana, kufutwa, au kurejeshwa yanaweza kufuta au kuzuia uthibitisho wa uhifadhi.
+5.4 Marejesho, kama yapo, hushughulikiwa kulingana na sheria, sheria za mtoa huduma, na mchakato wetu wa usaidizi.
+
+6. TABIA YA MTUMIAJI
+Unakubali kutofanya yafuatayo:
+(a) kutumia vibaya Huduma kwa udanganyifu, utakatishaji fedha, au shughuli haramu;
+(b) kuwasumbua madereva, abiria, au wafanyakazi;
+(c) kuingilia malipo, uaminifu wa eneo, au mifumo ya usalama;
+(d) kuharibu au kutumia vibaya API zaidi ya matumizi ya kawaida ya programu;
+(e) kupakia maudhui hatari au kujaribu ufikiaji usioidhinishwa.
+
+7. USALAMA
+7.1 Watumizi lazima wafuate sheria za barabara na maelekezo ya usalama yanayofaa.
+7.2 Ripoti matukio ya usalama kupitia njia za usaidizi ndani ya programu haraka iwezekanavyo.
+
+8. MALI MILIKI
+Programu, chapa, programu-jalizi, na maudhui tunayotoa yanalindwa na sheria za mali miliki. Unapokea leseni ndogo, inayoweza kubatilishwa, isiyo ya kipekee ya kutumia programu kwa matumizi halali ya kibinafsi ya Huduma.
+
+9. FARAGHA
+Ushughulikiaji wetu wa data ya kibinafsi umeelezwa katika Sera yetu ya Faragha. Kwa kutumia Huduma unakubali kuwa uchakataji unaohitajika kuendesha akaunti, uhifadhi, malipo, na usaidizi unaweza kufanyika.
+
+10. KANUSHO
+KADIRI INAVYORUHUSIWA NA SHERIA, HUDUMA INATOLEWA "KAMA ILIVYO" NA "KAMA INAVYOPATIKANA". TUNAKANA DHAMANA ZA UWEZO WA KUUZA, UFAA KWA KUSUDI MAALUM, NA KUTOKIUKA. HATUHAKIKISHII KUWA HUDUMA ITAKUWA BILA MAKOSA AU ISIKATIKE.
+
+11. KIKOMO CHA DHIMA
+KADIRI INAVYORUHUSIWA NA SHERIA, HATUWIBI KWA MADHARA YASIYO YA MOJA KWA MOJA, YASIYOTARAJIWA, MAALUM, YANAYOFUATA, AU YAADHABU, AU KWA FAIDA ZILIZOPOTEA, DATA ILIYOPOTEA, AU USUMBUEU WA BIASHARA, YANAYOTOKANA NA MATUMIZI YAKO YA HUDUMA. DHIMA YETU JUMLA KWA DAI ZINAZOHUSIANA NA HUDUMA IMEPUNGUZWA HADI KIASI ULICHOTULIPA KWA SAFARI AU KIPENGELE KINACHOSABABISHA DAI KATIKA MIEZI MITATU (3) KABLA YA DAI, AU KIASI CHA CHINI KINACHOHITAJIKA NA SHERIA IKIWA NI KUBWA ZAIDI.
+
+12. FIDIA
+Unakubali kutufidia na kutulinda sisi na washirika wetu dhidi ya dai zinazotokana na uvunjaji wako wa Masharti haya, matumizi mabaya ya Huduma, au ukiukaji wa sheria, isipokuwa kwa kadiri iliyosababishwa na utovu wetu wa nidhamu wa makusudi.
+
+13. KUSIMAMISHWA NA KUKOMESHWA
+Tunaweza kusimamisha au kukomesha ufikiaji kwa uvunjaji wa Masharti haya, hatari ya kisheria, kutolipa, au ulinzi wa jamii. Unaweza kuacha kutumia Huduma wakati wowote. Masharti ambayo kwa asili yanapaswa kuendelea yataendelea baada ya kukomesha.
+
+14. MABADILIKO YA MASHARTI
+Tunaweza kusasisha Masharti haya. Tunapochapisha toleo jipya, tunaweza kukuhitaji ukubali ndani ya programu kabla ya kuendelea kutumia. Kitambulisho cha toleo na tarehe ya kuanza vitaonekana pamoja na maandishi unayokubali.
+
+15. SHERIA INAYOTAWALA
+Masharti haya yanatawaliwa na sheria za Kenya, bila kuzingatia sheria za mgongano wa sheria, isipokuwa ulinzi wa lazima wa watumiaji mahali unapoishi unahitaji vinginevyo. Mahakama nchini Kenya zina mamlaka yasiyo ya kipekee, chini ya sheria ya lazima.
+
+16. MAWASILIANO
+Kwa maswali kuhusu Masharti haya, tumia Usaidizi ndani ya programu.
+
+Kwa kugusa "Kubali" (au sawa nayo) unathibitisha kuwa umesoma na unakubali toleo hili la Masharti ya Huduma.

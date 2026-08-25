@@ -1,5 +1,7 @@
-
+from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
+
+from .models import CustomUser
 from .whatsappOTP import  normalize_phone_number
 from rest_framework.response import Response
 
@@ -8,12 +10,40 @@ import json
 
 from .finalOTP import OTP
 from .serializer import RegisterUserSerializers, OtpVerificationSerializers, EmailNotificationSerializer, \
-    ResendOtpSerializer
+    ResendOtpSerializer, AndroidOtpRequestSerializer
 from .finalOTP import r
 
 
+class AndroidRequestOtpView(APIView):
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = AndroidOtpRequestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        print(request.data)
+
+        phone_number = normalize_phone_number(
+            serializer.validated_data["phone_number"]
+        )
+        print(phone_number)
+
+        # ✅ CHECK USER EXISTS
+        if not CustomUser.objects.filter(phone_number=phone_number).exists():
+            return Response(
+                {"message": "User not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
+
+        # ✅ GENERATE & SEND OTP (ANDROID FLOW)
+        result = OTP.android_generate_and_send_otp(phone_number)
+
+        return Response(
+            result,
+            status=status.HTTP_200_OK
+        )
 
 class EarlyRegisterUserView(APIView):
+    permission_classes = (AllowAny,)
     def post(self, request):
         serializer = RegisterUserSerializers(data=request.data)
         print(request.data)
@@ -28,6 +58,7 @@ class EarlyRegisterUserView(APIView):
 
 
 class PostOtpView(APIView):
+    permission_classes = [AllowAny]
 
     def post(self, request):
         otpserializer = OtpVerificationSerializers(data=request.data)
@@ -83,29 +114,58 @@ class ResendOtpView(APIView):
             return Response({"detail": result["message"]}, status=400)
 
 class VerifyOTPView(APIView):
+    permission_classes = [AllowAny]
+
     def post(self, request):
-        print(request.data)
-        unormalized_phone_number = request.data.get("phone_number")
-        phone_number = normalize_phone_number(unormalized_phone_number)
+        print("DATA RECEIVED:", request.data)
+
+        raw_phone = request.data.get("phone_number")
         otp_code = request.data.get("otp")
 
-        if not phone_number or not otp_code:
+        if not raw_phone or not otp_code:
             return Response(
-                {"message": "Phone number and OTP code are required"},
+                {"message": "Phone number and OTP are required"},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        # Call your static method
+        phone_number = normalize_phone_number(raw_phone)
+
+        # 1️⃣ Verify OTP (DO NOT delete Redis here)
         result = OTP.verify_otp(phone_number, otp_code)
-        if not result:
-            print("Error verfiying code")
+        if result["code"] != 200:
+            return Response(result, status=result["code"])
 
-        # Return appropriate response
-        if result["code"] == 200:
-            return Response(result, status=status.HTTP_200_OK)
-        elif result["code"] == 404:
-            return Response(result, status=status.HTTP_404_NOT_FOUND)
-        else:
-            return Response(result, status=status.HTTP_400_BAD_REQUEST)
+        # 2️⃣ Fetch registration data from Redis
+        redis_key = f"user_otp:{phone_number}"
+        stored_data_json = r.get(redis_key)
 
+        if not stored_data_json:
+            return Response(
+                {"message": "Registration data not found"},
+                status=status.HTTP_404_NOT_FOUND
+            )
 
+        stored_data = json.loads(stored_data_json)
+
+        # 3️⃣ Create user DIRECTLY (no serializer)
+        try:
+             CustomUser.objects.create_user(
+                phone_number=stored_data["phone_number"],
+                first_name=stored_data.get("first_name", ""),
+                second_name=stored_data.get("second_name", ""),
+            )
+
+        except Exception as e:
+            print("USER CREATE ERROR:", e)
+            return Response(
+                {"error": "User creation failed"},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+        # 4️⃣ Delete Redis ONLY after success
+        r.delete(redis_key)
+
+        return Response(
+            {"message": "User registered successfully"},
+            status=status.HTTP_200_OK
+        )

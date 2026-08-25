@@ -71,6 +71,31 @@ class OTP:
         print(f"Sent OTP {otp} to {email} via Email. Status: {response.status_code}")
 
     @staticmethod
+    def android_generate_and_send_otp(phone_number, first_name=None, second_name=None):
+        # Normalize the phone number
+        phone_number = normalize_phone_number(phone_number)
+
+        # Generate OTP
+        otp = OTP.GenerateOTP()
+
+        # Prepare Redis data
+        redis_data = {
+            "first_name": first_name,
+            "second_name": second_name,
+            "phone_number": phone_number,
+            "otp": otp,
+            "verification_channel": "sms",  # SMS only
+        }
+
+        # Save to Redis with 5-minute expiry
+        r.set(f"user_otp:{phone_number}", json.dumps(redis_data), ex=300)
+
+        # Send OTP via SMS
+        OTP.send_otp("sms", phone_number, otp)
+
+        print(f"✅ OTP {otp} generated and sent to {phone_number} via SMS")
+        return {"phone_number": phone_number, "otp": otp, "message": "OTP sent successfully"}
+    @staticmethod
     def save_user_otp(user_data):
         verification_channel = user_data.get('verificationMethod', 'sms')
         otp = OTP.GenerateOTP()
@@ -112,8 +137,24 @@ class OTP:
         redis_data = json.loads(stored_data)
         stored_otp = str(redis_data.get("otp"))
 
+        if stored_otp != str(otp_code):
+            return {"code": 400, "message": "Invalid OTP"}
+
+            # correct OTP
+        return {"code": 200, "message": "OTP verified successfully"}
+
+    @staticmethod
+    def android_verify_otp(phone_number, otp_code):
+        phone_number = normalize_phone_number(phone_number)
+        key1 = f"user_otp:{phone_number}"
+
+        stored_data = r.get(key1)
+        if not stored_data:
+            return {"code": 404, "message": "OTP not found or expired"}
+
+        redis_data = json.loads(stored_data)
+        stored_otp = str(redis_data.get("otp"))
+
         if stored_otp == str(otp_code):
             r.delete(key1)
             return {"code": 200, "message": "OTP verified successfully"}
-
-

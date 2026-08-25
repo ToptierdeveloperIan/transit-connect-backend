@@ -1,0 +1,72 @@
+IMANI COMMUNITY — TERMS OF SERVICE
+Version 1.0.0
+Effective date: 19 July 2026
+
+IMPORTANT: Please read these Terms of Service ("Terms") carefully before using the Imani Community mobile application and related services (the "Service"). By creating an account, accessing, or using the Service, you agree to be bound by these Terms. If you do not agree, do not use the Service.
+
+1. WHO WE ARE
+1.1 The Service is operated to facilitate route-based community transport, booking, payments, and related features for riders and drivers ("Users").
+1.2 Contact for legal notices and support will be published in the in-app Help & Support section and may be updated from time to time.
+
+2. ELIGIBILITY
+2.1 You must provide accurate registration information, including a valid phone number capable of receiving one-time passcodes (OTP).
+2.2 You represent that you have legal capacity to enter into these Terms in your jurisdiction.
+2.3 Drivers must hold all licences, permits, and vehicle standards required by applicable law and by our onboarding requirements.
+
+3. ACCOUNTS AND SECURITY
+3.1 Access is phone-number based. You are responsible for safeguarding devices used to receive OTP codes and for all activity under your account.
+3.2 Notify us promptly if you suspect unauthorised access. We may suspend accounts to protect Users or the Service.
+3.3 You must not share accounts, create accounts for others without authority, or impersonate any person.
+
+4. THE SERVICE
+4.1 Riders may browse routes, obtain fare quotes, apply eligible promotions where available, request bookings, and pay for trips through supported payment methods (including mobile money where enabled).
+4.2 Drivers may set availability, receive trip-related instructions, and complete trips subject to platform rules.
+4.3 We do not guarantee uninterrupted availability, matching times, or that a bus or driver will always be available on a chosen route.
+4.4 Features such as offline caching, promotions, and live tracking may be partial or change over time.
+
+5. BOOKINGS, FARES, AND PAYMENTS
+5.1 Displayed fares, including any discounted fare, are estimates or quotes until payment is successfully confirmed according to our payment provider and server records.
+5.2 Promotional codes are subject to separate eligibility rules, attempt limits, expiry, and server-side validation. Redeeming a code is not the same as consuming an attempt; attempts are typically consumed only after successful payment according to our promo policies.
+5.3 You authorise us and our payment partners to process payments you initiate. Failed, cancelled, or reversed payments may cancel or withhold booking confirmation.
+5.4 Refunds, if any, are handled according to applicable law, provider rules, and our published support process.
+
+6. USER CONDUCT
+You agree not to:
+(a) misuse the Service for fraud, money laundering, or illegal activity;
+(b) harass drivers, riders, or staff;
+(c) interfere with payments, location integrity, or safety systems;
+(d) reverse engineer or abuse APIs beyond normal app use;
+(e) upload malicious content or attempt unauthorised access.
+
+7. SAFETY
+7.1 Users must comply with traffic laws and reasonable safety instructions.
+7.2 Report safety incidents through in-app support channels as soon as practicable.
+
+8. INTELLECTUAL PROPERTY
+The app, branding, software, and content we provide are protected by intellectual property laws. You receive a limited, revocable, non-exclusive licence to use the app for personal lawful use of the Service.
+
+9. PRIVACY
+Our handling of personal data is described in our Privacy Policy. By using the Service you acknowledge that processing necessary to operate accounts, bookings, payments, and support may occur.
+
+10. DISCLAIMERS
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE SERVICE IS PROVIDED "AS IS" AND "AS AVAILABLE". WE DISCLAIM WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SERVICE WILL BE ERROR-FREE OR UNINTERRUPTED.
+
+11. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE ARE NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR LOST PROFITS, LOST DATA, OR BUSINESS INTERRUPTION, ARISING FROM YOUR USE OF THE SERVICE. OUR AGGREGATE LIABILITY FOR CLAIMS RELATING TO THE SERVICE IS LIMITED TO THE AMOUNT YOU PAID TO US FOR THE TRIP OR FEATURE GIVING RISE TO THE CLAIM IN THE THREE (3) MONTHS BEFORE THE CLAIM, OR TO THE MINIMUM AMOUNT REQUIRED BY LAW IF GREATER.
+
+12. INDEMNITY
+You agree to indemnify and hold harmless the operator and its affiliates from claims arising out of your breach of these Terms, misuse of the Service, or violation of law, except to the extent caused by our wilful misconduct.
+
+13. SUSPENSION AND TERMINATION
+We may suspend or terminate access for violation of these Terms, legal risk, non-payment, or protection of the community. You may stop using the Service at any time. Provisions that by nature should survive will survive termination.
+
+14. CHANGES TO THE TERMS
+We may update these Terms. When we publish a new version, we may require you to accept it in the app before continued use. The version identifier and effective date will appear with the text you accept.
+
+15. GOVERNING LAW
+These Terms are governed by the laws of Kenya, without regard to conflict-of-law rules, unless mandatory consumer protections in your place of residence require otherwise. Courts in Kenya have non-exclusive jurisdiction, subject to mandatory law.
+
+16. CONTACT
+For questions about these Terms, use Help & Support in the app.
+
+By tapping "Accept" (or equivalent) you confirm that you have read and agree to this version of the Terms of Service.
